@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spyro Studio — Download</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      line-height: 1.6;
+      color: #1a1a2e;
+      background: #fafafa;
+    }
+    .container { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    h1 { font-size: 28px; font-weight: 700; margin: 0 0 8px; color: #1a1a2e; }
+    .subtitle { color: #666; margin-bottom: 32px; }
+    .meta { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #eee; }
+    .meta-item { font-size: 14px; color: #555; }
+    .meta-item strong { color: #1a1a2e; }
+    .downloads { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 40px; }
+    .card {
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 24px;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-color: #d0d0d0; }
+    .card.recommended { border-color: #f59e0b; background: #fffbeb; }
+    .card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .card-icon { width: 40px; height: 40px; border-radius: 8px; background: #f59e0b; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; }
+    .card.recommended .card-icon { background: #f59e0b; }
+    .card-title { font-size: 16px; font-weight: 600; }
+    .card-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; background: #f59e0b; color: white; text-transform: uppercase; }
+    .card-details { font-size: 13px; color: #666; margin-bottom: 16px; }
+    .card-details code { background: #f3f4f6; padding: 2px 6px; border-radius: 4px; font-family: ui-monospace, monospace; font-size: 12px; }
+    .checksum { font-family: ui-monospace, monospace; font-size: 11px; color: #888; background: #f9fafb; padding: 8px 12px; border-radius: 6px; margin-bottom: 16px; word-break: break-all; }
+    .btn {
+      display: inline-block;
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .btn:active { transform: scale(0.98); }
+    .btn-primary { background: #1a1a2e; color: white; }
+    .btn-primary:hover { background: #0f0f1a; }
+    .btn-secondary { background: #f3f4f6; color: #1a1a2e; }
+    .btn-secondary:hover { background: #e5e7eb; }
+    .install { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 24px; margin-top: 24px; }
+    .install h3 { margin: 0 0 16px; font-size: 16px; }
+    .install pre { background: #1e1e2e; color: #e0e0e0; padding: 16px; border-radius: 8px; overflow-x: auto; font-size: 13px; }
+    .install code { font-family: ui-monospace, monospace; }
+    .footer { text-align: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid #eee; color: #888; font-size: 13px; }
+    .footer a { color: #555; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+    @media (max-width: 600px) {
+      .container { padding: 24px; }
+      h1 { font-size: 24px; }
+      .meta { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Spyro Studio <span style="font-weight:400;color:#888;">v0.1.0</span></h1>
+    <p class="subtitle">A free, local, provider-agnostic coding studio. Chat, IDE, and Idea Box — all on your machine.</p>
+
+    <div class="meta">
+      <div class="meta-item"><strong>Version:</strong> 0.1.0</div>
+      <div class="meta-item"><strong>Released:</strong> 2026-10-20</div>
+      <div class="meta-item"><strong>Platform:</strong> Linux (x86_64, glibc 2.31+)</div>
+      <div class="meta-item"><strong>License:</strong> Free, closed-source</div>
+    </div>
+
+    <div class="downloads">
+      <div class="card recommended">
+        <div class="card-header">
+          <div class="card-icon">⬇</div>
+          <div>
+            <div class="card-title">AppImage <span class="card-badge">Recommended</span></div>
+            <div class="card-details">104.4 MB · Single file, runs anywhere</div>
+          </div>
+        </div>
+        <div class="checksum">SHA256: 8d3cc75cca7e0f0f34ed8d85fd7f970f0756dcbe567be50d79b2f7681ce07844</div>
+        <a class="btn btn-primary" href="Spyro Studio-0.1.0-x86_64.AppImage" download>Download AppImage</a>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">📦</div>
+          <div>
+            <div class="card-title">Portable Tarball</div>
+            <div class="card-details">1.0 MB · Extract & run</div>
+          </div>
+        </div>
+        <div class="checksum">SHA256: d7458ff5c96486cfea8602943c68d694f4521dd0586f88ddba95699e4d4630ee</div>
+        <a class="btn btn-secondary" href="claude-free-spyro-0.1.0-linux-x64.tar.gz" download>Download Tarball</a>
+      </div>
+    </div>
+
+    <div class="install">
+      <h3>📋 Installation</h3>
+      <p><strong>AppImage (easiest):</strong></p>
+      <pre><code>chmod +x Spyro\ Studio-0.1.0-x86_64.AppImage
+./Spyro\ Studio-0.1.0-x86_64.AppImage</code></pre>
+      <p style="margin-top:16px;"><strong>Tarball:</strong></p>
+      <pre><code>tar -xzf claude-free-spyro-0.1.0-linux-x64.tar.gz
+cd claude-free-spyro-0.1.0-linux-x64
+./launch.sh</code></pre>
+      <p style="margin-top:16px;"><strong>Verify checksum:</strong></p>
+      <pre><code>sha256sum Spyro\ Studio-0.1.0-x86_64.AppImage
+# Should match: 8d3cc75cca7e0f0f34ed8d85fd7f970f0756dcbe567be50d79b2f7681ce07844</code></pre>
+    </div>
+
+    <div class="footer">
+      <p>Spyro Studio v0.1.0 · Built 2026-10-20 · <a href="https://github.com">GitHub</a> · <a href="#">Documentation</a></p>
+      <p>Free but closed-source. Your files, your keys, no account.</p>
+    </div>
+  </div>
+</body>
+</html>
