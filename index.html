@@ -3,68 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spyro Studio — Free Local AI Coding Studio</title>
-  <meta name="description" content="Spyro Studio is a free, local, provider-agnostic coding studio. Chat, IDE, and Idea Box — all on your machine. Your files, your keys, no account, no cloud. Built by Lewis Kariuki, a software engineer from Kenya.">
-  <meta name="keywords" content="spyro studio, claude free, free ai coding agent, local coding studio, provider-agnostic, ai software engineer, chat ide idea box, offline coding, free forever, open source alternative, windows mac linux, Lewis Kariuki, Kenya software engineer">
-  <meta name="author" content="Lewis Kariuki — Spyro Technologies">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#1a1a1a">
-  <link rel="canonical" href="https://claude-spyro.pages.dev/">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://claude-spyro.pages.dev/">
-  <meta property="og:title" content="Spyro Studio — Free Local AI Coding Studio">
-  <meta property="og:description" content="A free, local, provider-agnostic coding studio. Chat, IDE, and Idea Box — all on your machine. Your files, your keys, no account, no cloud.">
-  <meta property="og:image" content="https://claude-spyro.pages.dev/og-image.png">
-  <meta property="og:site_name" content="Spyro Studio">
-  <meta property="og:locale" content="en_US">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://claude-spyro.pages.dev/">
-  <meta name="twitter:title" content="Spyro Studio — Free Local AI Coding Studio">
-  <meta name="twitter:description" content="A free, local, provider-agnostic coding studio. Chat, IDE, and Idea Box — all on your machine. Your files, your keys, no account.">
-  <meta name="twitter:image" content="https://claude-spyro.pages.dev/og-image.png">
-  <meta name="twitter:creator" content="@lewis_kariuki">
-
-  <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Spyro Studio",
-    "applicationCategory": "DeveloperApplication",
-    "operatingSystem": "Windows, macOS, Linux",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "description": "A free, local, provider-agnostic coding studio. Chat, IDE, and Idea Box — all on your machine.",
-    "author": {
-      "@type": "Person",
-      "name": "Lewis Kariuki",
-      "jobTitle": "Software Engineer",
-      "nationality": "Kenyan",
-      "url": "https://github.com/lingzi3628-dot"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Spyro Technologies",
-      "url": "https://claude-spyro.pages.dev/"
-    },
-    "softwareVersion": "0.1.0",
-    "license": "https://claude-spyro.pages.dev/#license",
-    "downloadUrl": "https://claude-spyro.pages.dev/",
-    "screenshot": "https://claude-spyro.pages.dev/screenshot.png",
-    "featureList": "AI Chat, VS Code-style IDE, Idea Box, Terminal, Database Explorer, Plugin Marketplace, Sandbox, Git Integration, Multi-cursor Editing, Diff View, Live Preview, Ports Panel"
-  }
-  </script>
-
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐉</text></svg>">
-  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐉</text></svg>">
-
+  <title>Spyro Studio — Download</title>
+  <meta name="description" content="Spyro Studio is a free, local, provider-agnostic coding studio. Chat, IDE, and Idea Box — all on your machine.">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
@@ -262,13 +202,13 @@
       margin-bottom: 28px;
     }
 
-    /* ── OS download cards ── */
-    .os-grid {
+    /* ── Download cards ── */
+    .dl-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 16px;
     }
-    .os-card {
+    .dl-card {
       background: var(--bg-elev);
       border: 1px solid var(--border);
       border-radius: 12px;
@@ -277,30 +217,30 @@
       position: relative;
       overflow: hidden;
     }
-    .os-card:hover {
+    .dl-card:hover {
       border-color: var(--accent);
       transform: translateY(-2px);
       box-shadow: 0 12px 40px rgba(0,0,0,0.3);
     }
-    .os-card.recommended { border-color: var(--accent); }
-    .os-card-head {
+    .dl-card.recommended { border-color: var(--accent); }
+    .dl-card-head {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 16px;
     }
-    .os-card-icon {
-      width: 42px;
-      height: 42px;
+    .dl-card-icon {
+      width: 38px;
+      height: 38px;
       border-radius: 8px;
       background: var(--accent-soft);
       color: var(--accent-bright);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 22px;
+      font-size: 18px;
     }
-    .os-card-badge {
+    .dl-card-badge {
       font-family: 'JetBrains Mono', monospace;
       font-size: 10.5px;
       font-weight: 600;
@@ -311,9 +251,9 @@
       padding: 3px 9px;
       border-radius: 5px;
     }
-    .os-card-title { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
-    .os-card-sub { font-size: 13px; color: var(--text-dim); margin-bottom: 14px; }
-    .os-card-file {
+    .dl-card-title { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .dl-card-sub { font-size: 13px; color: var(--text-dim); margin-bottom: 14px; }
+    .dl-card-file {
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
       color: var(--text-faint);
@@ -326,7 +266,7 @@
       text-overflow: ellipsis;
       white-space: nowrap;
     }
-    .os-card-sha {
+    .dl-card-sha {
       font-family: 'JetBrains Mono', monospace;
       font-size: 10px;
       color: var(--text-faint);
@@ -334,7 +274,7 @@
       margin-bottom: 16px;
       line-height: 1.6;
     }
-    .os-card-sha b { color: var(--text-dim); font-weight: 500; }
+    .dl-card-sha b { color: var(--text-dim); font-weight: 500; }
     .btn {
       display: inline-flex;
       align-items: center;
@@ -356,26 +296,6 @@
     .btn-primary:hover { background: var(--accent-bright); }
     .btn-secondary { background: var(--bg-sunken); color: var(--text); border: 1px solid var(--border); }
     .btn-secondary:hover { background: var(--border); }
-    .btn-ghost { background: transparent; color: var(--text-dim); border: 1px solid var(--border); }
-    .btn-ghost:hover { background: var(--bg-elev); color: var(--text); }
-
-    /* ── Portable note ── */
-    .portable {
-      margin-top: 20px;
-      background: var(--bg-elev);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 18px 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .portable-text { flex: 1; min-width: 240px; }
-    .portable-text h3 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
-    .portable-text p { font-size: 12.5px; color: var(--text-dim); }
-    .portable a { flex: 0 0 auto; min-width: 200px; }
 
     /* ── Steps ── */
     .steps { display: flex; flex-direction: column; gap: 20px; }
@@ -490,36 +410,6 @@
       padding: 2px 6px;
     }
 
-    /* ── About / Developer ── */
-    .about {
-      background: var(--bg-elev);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 28px;
-      display: flex;
-      gap: 24px;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
-    .about-avatar {
-      width: 72px;
-      height: 72px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--accent), #b35c3f);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-      flex: 0 0 auto;
-    }
-    .about-body { flex: 1; min-width: 240px; }
-    .about-body h3 { font-size: 16px; font-weight: 700; margin-bottom: 2px; }
-    .about-body .role { font-size: 13px; color: var(--accent-bright); margin-bottom: 10px; }
-    .about-body p { font-size: 13.5px; color: var(--text-dim); line-height: 1.65; margin-bottom: 12px; }
-    .about-body p:last-child { margin-bottom: 0; }
-    .about-body a { color: var(--accent-bright); text-decoration: none; }
-    .about-body a:hover { text-decoration: underline; }
-
     /* ── Footer ── */
     .footer {
       border-top: 1px solid var(--border-soft);
@@ -537,8 +427,6 @@
       .hero { padding: 48px 18px 32px; }
       .section { padding: 32px 18px; }
       .step { flex-direction: column; gap: 12px; }
-      .portable { flex-direction: column; align-items: stretch; }
-      .portable a { min-width: 0; }
     }
   </style>
 </head>
@@ -553,14 +441,13 @@
       <a href="#download">Download</a>
       <a href="#install">Install</a>
       <a href="#guide">Guide</a>
-      <a href="#about">About</a>
       <a href="#faq">FAQ</a>
     </div>
-    <span class="nav-version">v0.2.0</span>
+    <span class="nav-version">v0.1.0</span>
   </nav>
 
   <header class="hero">
-    <div class="hero-badge"><span class="dot"></span> Stable · Windows · macOS · Linux</div>
+    <div class="hero-badge"><span class="dot"></span> Stable · Linux x86_64</div>
     <h1>Build software with an <span class="accent">AI that runs on your machine</span></h1>
     <p>A free, local, provider-agnostic coding studio. Chat, IDE, and Idea Box — your files, your keys, no account, no cloud.</p>
 
@@ -572,8 +459,8 @@
         <span class="term-title">spyro — zsh</span>
       </div>
       <div class="term-body">
-        <span class="prompt">$</span> <span class="cmd">chmod +x Spyro.Studio-0.1.1-x86_64.AppImage</span><br>
-        <span class="prompt">$</span> <span class="cmd">./Spyro.Studio-0.1.1-x86_64.AppImage</span><br>
+        <span class="prompt">$</span> <span class="cmd">chmod +x Spyro.Studio-0.1.0-x86_64.AppImage</span><br>
+        <span class="prompt">$</span> <span class="cmd">./Spyro.Studio-0.1.0-x86_64.AppImage</span><br>
         <span class="out">▸ Starting Spyro Studio…</span><br>
         <span class="ok">✓</span> <span class="out">Server ready on</span> <span class="path">http://127.0.0.1:8791</span><br>
         <span class="ok">✓</span> <span class="out">Sandbox active · workspace isolated</span><br>
@@ -585,93 +472,70 @@
   <section class="section" id="download">
     <div class="section-title">Download</div>
     <h2>Get Spyro Studio</h2>
-    <p>Free, closed-source, and built for Windows, macOS, and Linux. Pick your platform.</p>
+    <p>Choose the format you prefer. Both are free and work on any modern Linux distribution.</p>
 
-    <div class="os-grid">
-      <div class="os-card recommended">
-        <div class="os-card-head">
-          <div class="os-card-icon">🪟</div>
-          <span class="os-card-badge">Recommended</span>
+    <div class="dl-grid">
+      <div class="dl-card recommended">
+        <div class="dl-card-head">
+          <div class="dl-card-icon">⬇</div>
+          <span class="dl-card-badge">Recommended</span>
         </div>
-        <div class="os-card-title">Windows</div>
-        <div class="os-card-sub">NSIS installer. One-click setup.</div>
-        <div class="os-card-file">Spyro.Studio-0.1.1-Setup.exe · 80.6 MB</div>
-        <div class="os-card-sha"><b>SHA256</b><br>see release page</div>
-        <a class="btn btn-primary" href="https://github.com/lingzi3628-dot/spyro-studio/releases/download/v0.2.0/Spyro.Studio-0.1.0-Setup.exe">
-          Download for Windows
+        <div class="dl-card-title">AppImage</div>
+        <div class="dl-card-sub">Single file. No install. Runs anywhere.</div>
+        <div class="dl-card-file">Spyro.Studio-0.1.0-x86_64.AppImage · 104.4 MB</div>
+        <div class="dl-card-sha"><b>SHA256</b><br>dbe0e571705f5cc819edd596909ce6b3e1ffd4bab488139e91d7d813574181c9</div>
+        <a class="btn btn-primary" href="https://github.com/lingzi3628-dot/claude-spyro/releases/download/v0.1.0/Spyro.Studio-0.1.0-x86_64.AppImage">
+          Download AppImage
         </a>
       </div>
 
-      <div class="os-card">
-        <div class="os-card-head">
-          <div class="os-card-icon">🍎</div>
+      <div class="dl-card">
+        <div class="dl-card-head">
+          <div class="dl-card-icon">📦</div>
         </div>
-        <div class="os-card-title">macOS</div>
-        <div class="os-card-sub">DMG. Drag to Applications.</div>
-        <div class="os-card-file">Spyro.Studio-0.1.1-x64.dmg · 101.8 MB</div>
-        <div class="os-card-sha"><b>SHA256</b><br>see release page</div>
-        <a class="btn btn-secondary" href="https://github.com/lingzi3628-dot/spyro-studio/releases/download/v0.2.0/Spyro.Studio-0.1.0-x64.dmg">
-          Download for macOS
+        <div class="dl-card-title">Portable Tarball</div>
+        <div class="dl-card-sub">Extract and run. Includes server runtime.</div>
+        <div class="dl-card-file">claude-free-spyro-0.1.0-linux-x64.tar.gz · 1.0 MB</div>
+        <div class="dl-card-sha"><b>SHA256</b><br>15b9e2789aac1222fca2b2e6f7c2a69612b34272a191468136e631ce4f573cf9</div>
+        <a class="btn btn-secondary" href="claude-free-spyro-0.1.0-linux-x64.tar.gz" download>
+          Download Tarball
         </a>
       </div>
-
-      <div class="os-card">
-        <div class="os-card-head">
-          <div class="os-card-icon">🐧</div>
-        </div>
-        <div class="os-card-title">Linux</div>
-        <div class="os-card-sub">AppImage. chmod +x and run.</div>
-        <div class="os-card-file">Spyro.Studio-0.1.1-x86_64.AppImage · 106.9 MB</div>
-        <div class="os-card-sha"><b>SHA256</b><br>see release page</div>
-        <a class="btn btn-secondary" href="https://github.com/lingzi3628-dot/spyro-studio/releases/download/v0.2.0/Spyro.Studio-0.1.0-x86_64.AppImage">
-          Download for Linux
-        </a>
-      </div>
-    </div>
-
-    <div class="portable">
-      <div class="portable-text">
-        <h3>Portable (any OS)</h3>
-        <p>Single tarball with the server + web UI. Run <code>launch.sh</code> (or <code>install.ps1</code> on Windows). No installer needed.</p>
-      </div>
-      <a class="btn btn-ghost" href="https://github.com/lingzi3628-dot/spyro-studio/releases/download/v0.2.0/claude-free-spyro-0.1.0-linux-x64.tar.gz">
-        Download Tarball
-      </a>
     </div>
   </section>
 
   <section class="section" id="install">
     <div class="section-title">Install</div>
     <h2>Set up in 3 steps</h2>
-    <p>No package manager, no sudo, no dependencies to install. Self-contained.</p>
+    <p>No package manager, no sudo, no dependencies to install. It is a single self-contained file.</p>
 
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
         <div class="step-body">
-          <h3>Download for your OS</h3>
-          <p>Pick Windows, macOS, or Linux above. The file is about 80–107 MB.</p>
+          <h3>Download the AppImage</h3>
+          <p>Click the download button above, or fetch it directly:</p>
+          <pre><span class="prompt">$</span> wget https://github.com/lingzi3628-dot/claude-spyro/releases/download/v0.1.0/Spyro.Studio-0.1.0-x86_64.AppImage</pre>
         </div>
       </div>
 
       <div class="step">
         <div class="step-num">2</div>
         <div class="step-body">
-          <h3>Install or run</h3>
-          <p><strong>Windows:</strong> Run the <code>.exe</code> installer, choose a folder, done.</p>
-          <p><strong>macOS:</strong> Open the <code>.dmg</code>, drag Spyro Studio to Applications.</p>
-          <p><strong>Linux:</strong> <code>chmod +x *.AppImage && ./Spyro.Studio-*.AppImage</code></p>
+          <h3>Make it executable</h3>
+          <p>AppImages are not executable by default. Add the permission once:</p>
+          <pre><span class="prompt">$</span> chmod +x Spyro.Studio-0.1.0-x86_64.AppImage</pre>
         </div>
       </div>
 
       <div class="step">
         <div class="step-num">3</div>
         <div class="step-body">
-          <h3>Start building</h3>
-          <p>Launch Spyro Studio. The server starts locally on <code>http://127.0.0.1:8791</code>. Pick a provider, paste your key, and start building.</p>
-          <pre><span class="prompt">$</span> ./Spyro.Studio-0.1.1-x86_64.AppImage
+          <h3>Run it</h3>
+          <p>Double-click it, or launch from a terminal to see startup logs:</p>
+          <pre><span class="prompt">$</span> ./Spyro.Studio-0.1.0-x86_64.AppImage
 <span class="out">▸ Spyro Studio · local coding studio</span>
-<span class="ok">✓</span> <span class="out">Server ready on</span> <span class="path">http://127.0.0.1:8791</span></pre>
+<span class="out">✓ server ready on <span class="path">http://127.0.0.1:8791</span></span></pre>
         </div>
       </div>
     </div>
@@ -716,30 +580,6 @@
     </div>
   </section>
 
-  <section class="section" id="about">
-    <div class="section-title">About</div>
-    <h2>Built by a developer, for developers</h2>
-    <p>Spyro Studio exists because building software should not cost money. Every developer deserves a powerful AI coding assistant that runs on their own machine — forever, free.</p>
-
-    <div class="about">
-      <div class="about-avatar">👨‍💻</div>
-      <div class="about-body">
-        <h3>Lewis Kariuki</h3>
-        <div class="role">Software Engineer · Kenya · Spyro Technologies</div>
-        <p>
-          Lewis is a software engineer and machine-learning enthusiast from Kenya. He builds tools that make developers faster without locking them into subscriptions, cloud lock-in, or paywalls. Spyro Studio is his answer to a simple question: <em>what if every developer could ship great software, regardless of budget?</em>
-        </p>
-        <p>
-          From Nairobi, he designs and ships Spyro Studio as a one-person studio — Spyro Technologies — focused on AI-assisted development, local-first tooling, and open access to software creation. The goal is simple: <strong>free forever, for everyone.</strong>
-        </p>
-        <p>
-          <a href="https://github.com/lingzi3628-dot" target="_blank" rel="noopener">GitHub</a> ·
-          <a href="https://claude-spyro.pages.dev" target="_blank" rel="noopener">Website</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
   <section class="section" id="faq">
     <div class="section-title">FAQ</div>
     <h2>Questions</h2>
@@ -761,30 +601,24 @@
       </details>
 
       <details class="faq-item">
-        <summary>Why is the installer so large?</summary>
-        <p>It bundles Electron, the app UI, the Node server, and all runtime dependencies into one self-contained file — that is why it runs on any machine without installing anything first.</p>
+        <summary>Why is the AppImage so large?</summary>
+        <p>It bundles Electron, the app UI, the Node server, and all runtime dependencies into one self-contained file — that is why it runs on any Linux without installing anything first.</p>
       </details>
 
       <details class="faq-item">
         <summary>Is this open source?</summary>
-        <p>No. Spyro Studio is free but closed-source. The binary is distributed as-is; the source is not published. Free forever does not mean open source.</p>
+        <p>No. Spyro Studio is free but closed-source. The binary is distributed as-is; the source is not published.</p>
       </details>
 
       <details class="faq-item">
         <summary>How do I update?</summary>
         <p>Download the new release and replace the old file. Settings and sessions are kept in your home folder, so nothing is lost between versions.</p>
       </details>
-
-      <details class="faq-item">
-        <summary>Does it work offline?</summary>
-        <p>The app runs entirely offline once installed. You only need an internet connection for the model provider you choose (or use Ollama for fully local AI).</p>
-      </details>
     </div>
   </section>
 
   <footer class="footer">
-    <p>Spyro Studio v0.2.0 · Free but closed-source · Windows · macOS · Linux</p>
-    <p>Built by <a href="https://github.com/lingzi3628-dot">Lewis Kariuki</a> · Spyro Technologies · Kenya</p>
+    <p>Spyro Studio v0.1.0 · Built 2026-10-22 · Free but closed-source</p>
     <p>Your files, your keys, no account.</p>
   </footer>
 
