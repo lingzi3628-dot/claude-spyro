@@ -54,7 +54,7 @@
       "name": "Spyro Technologies",
       "url": "https://claude-spyro.pages.dev/"
     },
-    "softwareVersion": "0.2.14",
+    "softwareVersion": "0.2.15",
     "license": "https://claude-spyro.pages.dev/#license",
     "downloadUrl": "https://claude-spyro.pages.dev/",
     "screenshot": "https://claude-spyro.pages.dev/screenshot.png",
@@ -556,7 +556,7 @@
       <a href="#about">About</a>
       <a href="#faq">FAQ</a>
     </div>
-    <span class="nav-version">v0.2.14</span>
+    <span class="nav-version">v0.2.15</span>
   </nav>
 
   <header class="hero">
@@ -597,7 +597,7 @@
         <div class="os-card-sub">NSIS installer. One-click setup.</div>
         <div class="os-card-file">Spyro.Studio-0.1.1-Setup.exe · 80.6 MB</div>
         <div class="os-card-sha"><b>SHA256</b><br>see release page</div>
-        <a class="btn btn-primary" href="https://github.com/lingzi3628-dot/spyro-studio/releases/download/v0.2.14/Spyro.Studio-0.1.0-Setup.exe">
+        <a class="btn btn-primary" href="https://github.com/lingzi3628-dot/spyro-studio/releases/download/v0.2.15/Spyro.Studio-0.1.0-Setup.exe">
           Download for Windows
         </a>
       </div>
@@ -610,7 +610,7 @@
         <div class="os-card-sub">DMG. Drag to Applications.</div>
         <div class="os-card-file">Spyro.Studio-0.1.1-x64.dmg · 101.8 MB</div>
         <div class="os-card-sha"><b>SHA256</b><br>see release page</div>
-        <a class="btn btn-secondary" href="https://github.com/lingzi3628-dot/spyro-studio/releases/download/v0.2.14/Spyro.Studio-0.1.0-x64.dmg">
+        <a class="btn btn-secondary" href="https://github.com/lingzi3628-dot/spyro-studio/releases/download/v0.2.15/Spyro.Studio-0.1.0-x64.dmg">
           Download for macOS
         </a>
       </div>
@@ -623,7 +623,7 @@
         <div class="os-card-sub">AppImage. chmod +x and run.</div>
         <div class="os-card-file">Spyro.Studio-0.1.1-x86_64.AppImage · 106.9 MB</div>
         <div class="os-card-sha"><b>SHA256</b><br>see release page</div>
-        <a class="btn btn-secondary" href="https://github.com/lingzi3628-dot/spyro-studio/releases/download/v0.2.14/Spyro.Studio-0.1.0-x86_64.AppImage">
+        <a class="btn btn-secondary" href="https://github.com/lingzi3628-dot/spyro-studio/releases/download/v0.2.15/Spyro.Studio-0.1.0-x86_64.AppImage">
           Download for Linux
         </a>
       </div>
@@ -634,48 +634,58 @@
         <h3>Portable (any OS)</h3>
         <p>Single tarball with the server + web UI. Run <code>launch.sh</code> (or <code>install.ps1</code> on Windows). No installer needed.</p>
       </div>
-      <a class="btn btn-ghost" href="https://github.com/lingzi3628-dot/spyro-studio/releases/download/v0.2.14/claude-free-spyro-0.1.0-linux-x64.tar.gz">
+      <a class="btn btn-ghost" href="https://github.com/lingzi3628-dot/spyro-studio/releases/download/v0.2.15/claude-free-spyro-0.1.0-linux-x64.tar.gz">
         Download Tarball
       </a>
     </div>
   </section>
 
-  <section class="section" id="install">
-    <div class="section-title">Install</div>
-    <h2>Set up in 3 steps</h2>
-    <p>No package manager, no sudo, no dependencies to install. Self-contained.</p>
+<section class="section" id="install">
+      <div class="section-title">Install</div>
+      <h2>Set up in 3 steps</h2>
+      <p>No package manager, no sudo, no dependencies to install. Self-contained.</p>
 
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Download for your OS</h3>
-          <p>Pick Windows, macOS, or Linux above. The file is about 80–107 MB.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Download for your OS</h3>
+            <p>Pick Windows, macOS, or Linux above. The file is about 80–107 MB.</p>
+          </div>
         </div>
-      </div>
 
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Install or run</h3>
-          <p><strong>Windows:</strong> Run the <code>.exe</code> installer, choose a folder, done.</p>
-          <p><strong>macOS:</strong> Open the <code>.dmg</code>, drag Spyro Studio to Applications.</p>
-          <p><strong>Linux:</strong> <code>chmod +x *.AppImage && ./Spyro.Studio-*.AppImage</code></p>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Install or run</h3>
+            <p><strong>Windows:</strong> Run the <code>.exe</code> installer, choose a folder, done.</p>
+            <p><strong>macOS:</strong> Open the <code>.dmg</code>, drag Spyro Studio to Applications.</p>
+            <p><strong>Linux — Option A (AppImage, native window):</strong></p>
+            <pre><span class="prompt">$</span> chmod +x Spyro.Studio-0.1.0-x86_64.AppImage
+<span class="prompt">$</span> ./Spyro.Studio-0.1.0-x86_64.AppImage</pre>
+            <p><strong>Linux — Option B (Portable, browser UI, works on any hardware):</strong></p>
+            <pre><span class="prompt">$</span> tar -xzf claude-free-spyro-0.1.0-linux-x64.tar.gz
+<span class="prompt">$</span> cd claude-free-spyro
+<span class="prompt">$</span> ./launch.sh</pre>
+            <p><em>Note: AppImage requires Intel Gen9+ (Skylake 2015+) or AMD equivalent. On older hardware (Haswell/Broadwell), use Option B — it runs in your browser at <code>http://127.0.0.1:8796</code> with zero GPU issues.</em></p>
+          </div>
         </div>
-      </div>
 
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Start building</h3>
-          <p>Launch Spyro Studio. The server starts locally on <code>http://127.0.0.1:8791</code>. Pick a provider, paste your key, and start building.</p>
-          <pre><span class="prompt">$</span> ./Spyro.Studio-0.1.1-x86_64.AppImage
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Start building</h3>
+            <p>Launch Spyro Studio. The server starts locally. Open the URL shown, pick a provider, paste your key, and start building.</p>
+            <pre><span class="prompt">$</span> ./Spyro.Studio-0.1.0-x86_64.AppImage
 <span class="out">▸ Spyro Studio · local coding studio</span>
 <span class="ok">✓</span> <span class="out">Server ready on</span> <span class="path">http://127.0.0.1:8791</span></pre>
+            <pre><span class="prompt">$</span> ./launch.sh
+<span class="out">▸ Spyro Studio · portable server</span>
+<span class="ok">✓</span> <span class="out">Server ready on</span> <span class="path">http://127.0.0.1:8796</span></pre>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
   <section class="section" id="guide">
     <div class="section-title">Guide</div>
@@ -783,7 +793,7 @@
   </section>
 
   <footer class="footer">
-    <p>Spyro Studio v0.2.14 · Free but closed-source · Windows · macOS · Linux</p>
+    <p>Spyro Studio v0.2.15 · Free but closed-source · Windows · macOS · Linux</p>
     <p>Built by <a href="https://github.com/lingzi3628-dot">Lewis Kariuki</a> · Spyro Technologies · Kenya</p>
     <p>Your files, your keys, no account.</p>
   </footer>
