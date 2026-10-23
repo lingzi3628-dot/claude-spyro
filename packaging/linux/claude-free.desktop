@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Spyro Studio
+Comment=Free, provider-agnostic AI coding agent
+Exec=/opt/claude-free/launch.sh
+Icon=dragon
+Terminal=true
+Categories=Development;IDE;

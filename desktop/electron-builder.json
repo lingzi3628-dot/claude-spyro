@@ -1,0 +1,114 @@
+{
+  "appId": "tech.spyro.claudefree",
+  "productName": "Spyro Studio",
+  "copyright": "Copyright © Spyro Technologies",
+  "artifactName": "${productName}-${version}-${arch}.${ext}",
+  "directories": {
+    "output": "dist-desktop",
+    "buildResources": "desktop/build"
+  },
+  "publish": null,
+  "files": [
+    "desktop/main.js",
+    "desktop/preload.js",
+    "!**/*.map"
+  ],
+  "extraResources": [
+    {
+      "from": "server/dist",
+      "to": "app/server/dist"
+    },
+    {
+      "from": "server/package.json",
+      "to": "app/server/package.json"
+    },
+    {
+      "from": ".desktop-stage/server_modules",
+      "to": "app/server/node_modules",
+      "filter": [
+        "**/*"
+      ]
+    },
+    {
+      "from": "web/dist",
+      "to": "app/web/dist"
+    }
+  ],
+  "linux": {
+    "target": [
+      {
+        "target": "AppImage",
+        "arch": [
+          "x64"
+        ]
+      },
+      {
+        "target": "deb",
+        "arch": [
+          "x64"
+        ]
+      }
+    ],
+    "category": "Development",
+    "icon": "desktop/build",
+    "synopsis": "A free, provider-agnostic AI coding agent",
+    "description": "Spyro Studio is a free, provider-agnostic AI coding agent. Runs entirely on your machine.",
+    "executableArgs": [
+      "--disable-dev-shm-usage"
+    ],
+    "desktop": {
+      "Comment": "AI & software development studio",
+      "Categories": "Development;IDE;",
+      "StartupWMClass": "Spyro Studio",
+      "Keywords": "AI;agent;coding;claude;developer;"
+    }
+  },
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": [
+          "x64"
+        ]
+      }
+    ],
+    "icon": "desktop/build/icon.ico",
+    "artifactName": "${productName}-${version}-Setup.${ext}"
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "Spyro Studio"
+  },
+  "mac": {
+    "target": [
+      {
+        "target": "dmg",
+        "arch": [
+          "x64",
+          "arm64"
+        ]
+      }
+    ],
+    "icon": "desktop/build/icon.icns",
+    "category": "public.app-category.developer-tools",
+    "identity": null
+  },
+  "dmg": {
+    "contents": [
+      {
+        "x": 130,
+        "y": 220
+      },
+      {
+        "x": 410,
+        "y": 220,
+        "type": "link",
+        "path": "/Applications"
+      }
+    ]
+  }
+}

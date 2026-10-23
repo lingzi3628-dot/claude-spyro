@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleName</key>                  <string>Spyro Studio</string>
+  <key>CFBundleDisplayName</key>           <string>Spyro Studio</string>
+  <key>CFBundleIdentifier</key>            <string>tech.spyro.claudefree</string>
+  <key>CFBundleVersion</key>               <string>__VERSION__</string>
+  <key>CFBundlePackageType</key>           <string>APPL</string>
+  <key>CFBundleExecutable</key>            <string>Spyro Studio</string>
+  <key>LSMinimumSystemVersion</key>        <string>10.15</string>
+  <key>NSHighResolutionCapable</key>       <true/>
+</dict>
+</plist>

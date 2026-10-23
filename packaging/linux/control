@@ -1,0 +1,12 @@
+Package: claude-free
+Version: __VERSION__
+Section: devel
+Priority: optional
+Architecture: amd64
+Maintainer: Spyro Technologies <hello@spyro.local>
+Installed-Size: 120000
+Depends: nodejs (>=18) | nodejs
+Description: Free, provider-agnostic AI coding agent (Spyro Studio)
+ A browser-based coding agent that works with any model provider, including
+ fully local models via Ollama. Runs on your own machine; your code does not
+ have to leave it.

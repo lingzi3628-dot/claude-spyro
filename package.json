@@ -1,0 +1,57 @@
+{
+  "name": "claude-free",
+  "version": "0.2.16",
+  "private": true,
+  "main": "desktop/main.js",
+  "author": "Spyro Technologies <hello@spyro.tech>",
+  "description": "A browser-based, provider-agnostic AI coding agent. Free Claude Code alternative.",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,web -c blue,green \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "npm -w server run dev",
+    "dev:web": "npm -w web run dev",
+    "build": "npm -w web run build && npm -w server run build && npm run bundle:server",
+    "start": "npm -w server run start",
+    "launch": "node launcher/launcher.js",
+    "package": "npm run build && node packaging/build.js native",
+    "smoke": "node scripts/smoke.cjs",
+    "package:all": "npm run build && node packaging/build.js all",
+    "package:deb": "npm run build && node packaging/build.js deb",
+    "desktop": "electron desktop/main.js",
+    "desktop:dist": "npm run build && node desktop/build-desktop.js",
+    "desktop:linux": "npm run build && node desktop/build-desktop.js linux",
+    "bundle:server": "node packaging/bundle-server.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "devDependencies": {
+    "@types/qrcode": "^1.5.6",
+    "concurrently": "^9.1.2",
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "esbuild@0.25.12": true,
+    "electron": true,
+    "electron-builder": true,
+    "app-builder-bin": true
+  },
+  "bin": {
+    "claude-free": "launcher/launcher.js"
+  },
+  "files": [
+    "launcher",
+    "server/dist",
+    "web/dist",
+    "packaging/runtime",
+    "packaging/linux",
+    "packaging/windows",
+    "packaging/macos"
+  ],
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  }
+}

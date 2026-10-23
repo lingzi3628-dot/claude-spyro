@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+ln -sf /opt/claude-free/launch.sh /usr/local/bin/claude-free 2>/dev/null || true
+echo "Spyro Studio installed. Run: claude-free"
+exit 0
