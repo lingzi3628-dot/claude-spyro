@@ -1,0 +1,140 @@
+name: Build, Test & Package
+
+# Cross-platform build: tests on Linux/Windows/macOS, builds the portable
+# packages, and produces native desktop installers (AppImage / NSIS .exe /
+# .dmg). On a version tag it publishes a GitHub release with every installer.
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test — ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Linux
+            os: ubuntu-latest
+          - name: Windows
+            os: windows-latest
+          - name: macOS
+            os: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (web + server)
+        run: npm run build
+
+      - name: Smoke test (portable, Node-only)
+        run: node scripts/smoke.cjs
+
+      - name: Package portable build
+        run: node packaging/build.js native
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portable-${{ matrix.os }}
+          path: dist-package/*
+          if-no-files-found: ignore
+          retention-days: 14
+
+  desktop:
+    name: Desktop installer — ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Linux
+            os: ubuntu-latest
+            target: linux
+            targets: AppImage,deb
+          - name: Windows
+            os: windows-latest
+            target: windows
+            targets: nsis
+          - name: macOS
+            os: macos-latest
+            target: macos
+            targets: dmg
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (web + server)
+        run: npm run build
+
+      - name: Build desktop installer
+        run: node desktop/build-desktop.js ${{ matrix.target }}
+        env:
+          CF_DESKTOP_TARGETS: ${{ matrix.targets }}
+
+      - name: Upload installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: desktop-${{ matrix.target }}
+          path: dist-desktop/*
+          if-no-files-found: error
+
+  release:
+    name: Publish release
+    runs-on: ubuntu-latest
+    needs: [test, desktop]
+    if: startsWith(github.ref, 'refs/tags/v')
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          merge-multiple: true
+
+      - name: Collect installers
+        run: |
+          set -e
+          mkdir -p release
+          find artifacts -type f \( \
+              -name '*.AppImage' -o -name '*.exe' -o -name '*.dmg' \
+              -o -name '*.deb' -o -name '*.zip' -o -name '*.tar.gz' \) \
+            -exec cp -n {} release/ \;
+          ls -la release
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: release/*
+          generate_release_notes: true
+          body: |
+            ## Spyro Studio installers
+
+            Pick the build for your platform:
+
+            - **Windows** — `Spyro Studio-<version>-Setup.exe` — run it, choose a folder, done.
+            - **Linux** — `Spyro Studio-<version>-x86_64.AppImage` — `chmod +x`, then run.
+              Or the `.deb` for Debian/Ubuntu.
+            - **macOS** — `Spyro Studio-<version>.dmg` — open and drag to Applications.
+            - **Portable (any OS)** — the `.tar.gz` / `.zip`.
+
+            Everything runs on your machine. Your files, your keys, no account.
