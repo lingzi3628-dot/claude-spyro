@@ -1,6 +1,6 @@
 {
   "name": "claude-free",
-  "version": "0.2.16",
+  "version": "0.2.19",
   "private": true,
   "main": "desktop/main.js",
   "author": "Spyro Technologies <hello@spyro.tech>",
